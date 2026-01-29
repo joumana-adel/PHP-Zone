@@ -1,0 +1,387 @@
+/* تنسيقات خاصة بصفحة الدروس - Lessons Page */
+
+/* تنسيقات أساسية لإعادة الضبط */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif; 
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
+    direction: ltr; /* تم تغيير الاتجاه إلى اليسار ليتناسب مع الكود واللغة الإنجليزية */
+}
+
+/* تنسيقات الهيدر */
+.main-header {
+    background: #4F5D95; /* لون PHP الأزرق/البنفسجي المميز */
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.website-logo {
+    width: 60px; /* حجم الشعار */
+    height: 60px;
+    border-radius: 5px; /* لمسة بسيطة */
+    margin-right: 20px;
+}
+
+.main-header h1 {
+    font-size: 1.8em;
+    flex-grow: 1; 
+}
+
+/* تنسيقات شريط التنقل */
+.main-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.main-nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+}
+
+.main-nav ul li a:hover {
+    background-color: #3c4974;
+}
+
+/* تنسيقات المحتوى الرئيسي */
+main {
+    padding: 40px 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section {
+    background: white;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+section h2 {
+    color: #4F5D95;
+    border-bottom: 2px solid #4F5D95;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* تنسيقات الرؤية والرسالة */
+.vision-mission {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.vision-mission .card {
+    flex: 1; 
+    min-width: 300px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #f0f3ff;
+}
+
+.vision-mission .card h3 {
+    color: #8892BF; /* لون أفتح من PHP */
+    margin-bottom: 10px;
+}
+
+/* تنسيقات اتصل بنا */
+.contact-us ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.contact-us li {
+    margin-bottom: 10px;
+}
+
+.contact-us a {
+    color: #4F5D95;
+    text-decoration: none;
+}
+
+/* تنسيقات الفوتر (تذييل الصفحة) */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: white;
+    margin-top: 20px;
+}
+/* تنسيقات خاصة بصفحة الدروس - Lessons Page */
+
+.lessons-page-content {
+    padding-top: 20px;
+}
+
+.lessons-page-content h2 {
+    text-align: center;
+    color: #4F5D95;
+    margin-bottom: 10px;
+}
+
+.description {
+    text-align: center;
+    font-style: italic;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+/* تصميم البطاقات لكل مفهوم رئيسي (Input, Process, Output) */
+.lesson-concept {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-left: 5px solid #4F5D95; /* شريط جانبي بلون مميز */
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.concept-title {
+    color: #4F5D95;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #eee;
+}
+
+/* تنسيق قائمة المواضيع الفرعية */
+.topic-list {
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.topic-list h4 {
+    color: #8892BF;
+    margin-top: 10px;
+    margin-bottom: 8px;
+}
+
+.topic-list ul {
+    list-style: none; /* إزالة التنقيط الافتراضي */
+    padding-left: 0;
+}
+
+.topic-list ul li {
+    margin-bottom: 8px;
+    padding: 5px 0 5px 20px;
+    position: relative;
+}
+
+/* شكل الروابط (لتكون تفاعلية) */
+.topic-list ul li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    transition: color 0.2s, background-color 0.2s;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.topic-list ul li a:hover {
+    color: #4F5D95;
+    background-color: #f0f3ff;
+    text-decoration: underline;
+}
+
+/* إضافة رمز بسيط بجانب كل رابط */
+.topic-list ul li::before {
+    content: "▶"; /* رمز سهم بسيط */
+    color: #4F5D95;
+    font-size: 0.8em;
+    position: absolute;
+    right: 0;
+    top: 9px;
+}/* ======================================================= */
+/* تنسيقات خاصة بصفحة الأمثلة (Examples Page) */
+/* ======================================================= */
+
+.examples-page-content h2 {
+    text-align: center;
+    color: #4F5D95;
+    margin-bottom: 10px;
+}
+
+/* تصميم قسم المثال (البطاقة الرئيسية) */
+.example-concept {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-left: 5px solid #00A3D7; /* لون مختلف قليلاً للأمثلة */
+    padding: 25px;
+    margin-bottom: 35px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.example-concept .concept-title {
+    color: #00A3D7;
+    border-bottom: 1px dashed #ccc;
+    margin-bottom: 20px;
+}
+
+.example-concept h4 {
+    color: #4F5D95;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+/* تنسيق الناتج (Output Block) */
+.output-block {
+    background-color: #e8f9e8; /* خلفية خضراء فاتحة لتمثيل الناتج الناجح */
+    color: #006400; /* لون نص أخضر داكن */
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 4px;
+    border: 1px solid #c8e6c9;
+}
+
+.output-block h4 {
+    color: #006400; 
+    margin: 0 0 8px 0;
+    font-size: 1em;
+}
+
+.output-block p {
+    margin: 5px 0;
+    font-family: 'Consolas', 'Monaco', monospace;
+}
+
+/* لجعل رابط "Examples" يظهر نشطاً في الشريط العلوي */
+.main-nav ul li.active-nav a {
+    background-color: #3c4974; 
+    font-weight: bold;
+}
+/* ======================================================= */
+/* تنسيقات صفحة الاختبار (Quiz Page) */
+/* ======================================================= */
+
+.quiz-page-content h2 {
+    text-align: center;
+    color: #4F5D95;
+    margin-bottom: 10px;
+}
+
+#phpQuizForm {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.quiz-concept {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-left: 5px solid #4F5D95; 
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.quiz-concept h3 {
+    color: #8892BF;
+    margin-bottom: 20px;
+    border-bottom: 1px dashed #eee;
+    padding-bottom: 10px;
+}
+
+.question-block {
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #f0f0f0;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.question-block p {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.question-block label {
+    display: block;
+    cursor: pointer;
+    padding: 8px 10px;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    transition: background-color 0.2s;
+}
+
+.question-block label:hover {
+    background-color: #eef4f9;
+}
+
+/* تنسيق زر الإرسال */
+#phpQuizForm button {
+    display: block;
+    width: 250px;
+    margin: 30px auto;
+    padding: 12px 20px;
+    background-color: #28a745; /* لون أخضر للإجراء */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
+}
+
+#phpQuizForm button:hover {
+    background-color: #1e7e34;
+}
+
+/* تنسيق حاوية النتائج */
+.results-container {
+    text-align: center;
+    background-color: #e6ffec; /* خلفية فاتحة للنتائج */
+    border: 2px solid #28a745;
+    padding: 40px;
+    border-radius: 10px;
+    margin: 50px auto;
+    max-width: 600px;
+}
+
+.results-container h2 {
+    color: #28a745;
+    margin-bottom: 20px;
+}
+
+#scorePercentage {
+    font-size: 2.5em;
+    font-weight: bold;
+    display: block;
+    color: #4F5D95;
+    margin: 15px 0;
+}
+
+.results-container button {
+    padding: 10px 20px;
+    background-color: #4F5D95;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.results-container button:hover {
+    background-color: #3c4974;
+}
+

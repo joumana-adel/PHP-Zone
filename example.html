@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP Zone - Solved Examples</title> 
+    <link rel="stylesheet" href="css/styles.css"> 
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo-container">
+            <img src="images/href.jpg" alt="PHP Zone Logo" class="website-logo">
+        </div>
+        <h1>PHP Zone - Solved Examples</h1>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="lessons.html">Lessons</a></li> 
+                <li class="active-nav"><a href="example.html">Examples</a></li>
+                <li class="active-nav"><a href="quiz.html">Quiz</a></li>  
+                
+            </ul>
+        </nav>
+    </header>
+
+    <main class="examples-page-content">
+        <h2>Practical Solved Examples for PHP Concepts</h2>
+        <p class="description">Review these simple, solved examples to understand how basic PHP concepts are implemented.</p>
+
+        <section class="example-concept">
+            <h3 class="concept-title">1. Input Data: Storing User Input</h3>
+            
+            <h4>Example: Processing a Form Submission</h4>
+            <p>We simulate receiving data (Name, Age) from an HTML form using the global <code>$_POST</code> array.</p>
+            
+            <div class="code-block">
+                <pre><code>
+&lt;?php
+    // هذا يحاكي البيانات القادمة من الحقل (input field)
+    $username = $_POST['user_name'] ?? 'Guest'; 
+    $user_age = $_POST['user_age'] ?? 30;
+    
+    echo "Hello, " . $username . "! Your calculated age is " . $user_age . ".";
+?&gt;
+                </code></pre>
+            </div>
+            
+            <div class="output-block">
+                <h4>Output: (If user inputs "Sara" and "28")</h4>
+                <p>Hello, Sara! Your calculated age is 28.</p>
+            </div>
+        </section>
+        
+        <section class="example-concept">
+            <h3 class="concept-title">2. Process: Basic Numeric Operators</h3>
+            
+            <h4>Example: Calculating Simple Interest</h4>
+            <p>We use multiplication and division operators to calculate the simple interest on a loan.</p>
+            
+            <div class="code-block">
+                <pre><code>
+&lt;?php
+    $principal = 1000;
+    $rate = 0.05; // 5% annual rate
+    $time = 3;    // 3 years
+
+    // Formula: Interest = Principal * Rate * Time
+    $interest = $principal * $rate * $time;
+
+    echo "Total Simple Interest: $" . $interest;
+?&gt;
+                </code></pre>
+            </div>
+            
+            <div class="output-block">
+                <h4>Output:</h4>
+                <p>Total Simple Interest: $150</p>
+            </div>
+        </section>
+
+        <section class="example-concept">
+            <h3 class="concept-title">3. Process: Conditions (IF, ELSEIF, ELSE)</h3>
+            
+            <h4>Example: Grading System</h4>
+            <p>We use conditional statements to assign a letter grade based on a numerical score.</p>
+            
+            <div class="code-block">
+                <pre><code>
+&lt;?php
+    $score = 85;
+    $grade = "";
+
+    if ($score >= 90) {
+        $grade = "A";
+    } elseif ($score >= 80) {
+        $grade = "B";
+    } else {
+        $grade = "C or lower";
+    }
+
+    echo "The student's grade is: " . $grade;
+?&gt;
+                </code></pre>
+            </div>
+            
+            <div class="output-block">
+                <h4>Output: (If score is 85)</h4>
+                <p>The student's grade is: B</p>
+            </div>
+        </section>
+        
+        <section class="example-concept">
+            <h3 class="concept-title">4. Process: Loops (FOR Loop)</h3>
+            
+            <h4>Example: Multiplication Table</h4>
+            <p>Using a **`for` loop** to generate the multiplication table for the number 7 from 1 to 5.</p>
+            
+            <div class="code-block">
+                <pre><code>
+&lt;?php
+    $number = 7;
+    for ($i = 1; $i <= 5; $i++) {
+        $result = $number * $i;
+        echo $number . " x " . $i . " = " . $result . "&lt;br>";
+    }
+?&gt;
+                </code></pre>
+            </div>
+            
+            <div class="output-block">
+                <h4>Output:</h4>
+                <p>7 x 1 = 7</p>
+                <p>7 x 2 = 14</p>
+                <p>7 x 3 = 21</p>
+                <p>7 x 4 = 28</p>
+                <p>7 x 5 = 35</p>
+            </div>
+        </section>
+
+        <section class="example-concept">
+            <h3 class="concept-title">5. Output Data: Displaying Output</h3>
+            
+            <h4>Example: Combining PHP and HTML Output</h4>
+            <p>Demonstrates using **`echo`** to combine strings, variables, and HTML tags for formatted output.</p>
+            
+            <div class="code-block">
+                <pre><code>
+&lt;?php
+    $message = "Welcome to PHP Zone";
+    $version = "8.3";
+    
+    // استخدام علامة H3 وربط المتغيرات
+    echo "&lt;h3 style='color: #4F5D95;'&gt;" . $message . "&lt;/h3&gt;";
+    echo "&lt;p&gt;The current version is: " . $version . "&lt;/p&gt;";
+?&gt;
+                </code></pre>
+            </div>
+            
+            <div class="output-block">
+                <h4>Output:</h4>
+                <h3 style="color: #4F5D95;">Welcome to PHP Zone</h3>
+                <p>The current version is: 8.3</p>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2025 PHP Zone Graduation Project. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

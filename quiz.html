@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP Academy - Basic Concepts Quizzes</title> 
+    <link rel="stylesheet" href="css/styles.css"> 
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo-container">
+            <img src="./images/href.jpg" alt="PHP Academy Logo" class="website-logo">
+        </div>
+        <h1>PHP Academy - Interactive Learning Platform</h1>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="lessons.html">Lessons</a></li> 
+                <li><a href="example.html">Examples</a></li>
+                <li class="active-nav"><a href="quiz.html">Quiz</a></li> 
+                </ul>
+        </nav>
+    </header>
+
+    <main class="quiz-page-content">
+        <h2>Test Your PHP Fundamentals Knowledge (5 Questions per Quiz)</h2>
+        <p class="description">Answer the questions for each concept separately and click 'Submit Quiz' to see your score for that section. You can complete the quizzes in any order.</p>
+
+        <section class="quiz-concept" id="quiz-section-1">
+            <h3>Quiz 1: Input Data / Variables</h3>
+            <form id="quizForm1">
+                <div class="question-block" data-correct-answer="A">
+                    <p>1. Which symbol must precede a variable name in PHP?</p>
+                    <label><input type="radio" name="q1_1" value="A"> $ (Dollar Sign)</label>
+                    <label><input type="radio" name="q1_1" value="B"> # (Hash)</label>
+                    <label><input type="radio" name="q1_1" value="C"> @ (At Sign)</label>
+                    <label><input type="radio" name="q1_1" value="D"> % (Percent)</label>
+                </div>
+                
+                <div class="question-block" data-correct-answer="C">
+                    <p>2. Which global array is used to retrieve data from an HTML form sent via the **POST** method?</p>
+                    <label><input type="radio" name="q1_2" value="A"> $_GET</label>
+                    <label><input type="radio" name="q1_2" value="B"> $_SERVER</label>
+                    <label><input type="radio" name="q1_2" value="C"> $_POST</label>
+                    <label><input type="radio" name="q1_2" value="D"> $GLOBALS</label>
+                </div>
+
+                <div class="question-block" data-correct-answer="B">
+                    <p>3. What function checks if a variable has been set and is **NOT NULL**?</p>
+                    <label><input type="radio" name="q1_3" value="A"> check_var()</label>
+                    <label><input type="radio" name="q1_3" value="B"> isset()</label>
+                    <label><input type="radio" name="q1_3" value="C"> empty()</label>
+                    <label><input type="radio" name="q1_3" value="D"> defined()</label>
+                </div>
+                
+                <div class="question-block" data-correct-answer="A">
+                    <p>4. What is the correct way to assign the string value "PHP" to a variable?</p>
+                    <label><input type="radio" name="q1_4" value="A"> $language = "PHP";</label>
+                    <label><input type="radio" name="q1_4" value="B"> language = "PHP";</label>
+                    <label><input type="radio" name="q1_4" value="C"> $language == "PHP";</label>
+                    <label><input type="radio" name="q1_4" value="D"> var $language = "PHP";</label>
+                </div>
+                
+                <div class="question-block" data-correct-answer="D">
+                    <p>5. Which global variable holds information about **headers**, paths, and script locations?</p>
+                    <label><input type="radio" name="q1_5" value="A"> $_FILES</label>
+                    <label><input type="radio" name="q1_5" value="B"> $_COOKIE</label>
+                    <label><input type="radio" name="q1_5" value="C"> $_SESSION</label>
+                    <label><input type="radio" name="q1_5" value="D"> $_SERVER</label>
+                </div>
+
+                <button type="button" onclick="submitQuiz(1)">Submit Quiz 1</button>
+            </form>
+            <div id="results1" class="results-container" style="display:none;"></div>
+        </section>
+        
+        <section class="quiz-concept" id="quiz-section-2">
+            <h3>Quiz 2: Basic Numeric Operators</h3>
+            <form id="quizForm2">
+                <div class="question-block" data-correct-answer="D">
+                    <p>1. What is the result of the PHP expression <code>10 % 3</code> (Modulo Operator)?</p>
+                    <label><input type="radio" name="q2_1" value="A"> 3</label>
+                    <label><input type="radio" name="q2_1" value="B"> 3.33</label>
+                    <label><input type="radio" name="q2_1" value="C"> 0</label>
+                    <label><input type="radio" name="q2_1" value="D"> 1</label>
+                </div>
+                
+                <div class="question-block" data-correct-answer="A">
+                    <p>2. Which operator is used for **exponentiation** (e.g., $2^3$) in PHP?</p>
+                    <label><input type="radio" name="q2_2" value="A"> **</label>
+                    <label><input type="radio" name="q2_2" value="B"> ^</label>
+                    <label><input type="radio" name="q2_2" value="C"> exp()</label>
+                    <label><input type="radio" name="q2_2" value="D"> //</label>
+                </div>
+                
+                <div class="question-block" data-correct-answer="B">
+                    <p>3. The shorthand operator <code>$x -= 10;</code> is equivalent to:</p>
+                    <label><input type="radio" name="q2_3" value="A"> $x = 10 - $x</label>
+                    <label><input type="radio" name="q2_3" value="B"> $x = $x - 10</label>
+                    <label><input type="radio" name="q2_3" value="C"> $x = -10</label>
+                    <label><input type="radio" name="q2_3" value="D"> $x - 10</label>
+                </div>
+                
+                <div class="question-block" data-correct-answer="C">
+                    <p>4. Which operator is used to **join (concatenate)** two strings in PHP?</p>
+                    <label><input type="radio" name="q2_4" value="A"> + (Plus)</label>
+                    <label><input type="radio" name="q2_4" value="B"> & (Ampersand)</label>
+                    <label><input type="radio" name="q2_4" value="C"> . (Dot)</label>
+                    <label><input type="radio" name="q2_4" value="D"> :: (Double Colon)</label>
+                </div>
+
+                <div class="question-block" data-correct-answer="A">
+                    <p>5. What is the value of <code>$count</code> after <code>$count = 5; $count++;</code>?</p>
+                    <label><input type="radio" name="q2_5" value="A"> 6</label>
+                    <label><input type="radio" name="q2_5" value="B"> 5</label>
+                    <label><input type="radio" name="q2_5" value="C"> 4</label>
+                    <label><input type="radio" name="q2_5" value="D"> Error</label>
+                </div>
+
+                <button type="button" onclick="submitQuiz(2)">Submit Quiz 2</button>
+            </form>
+            <div id="results2" class="results-container" style="display:none;"></div>
+        </section>
+
+        <section class="quiz-concept" id="quiz-section-3">
+            <h3>Quiz 3: Conditions / Decision Making</h3>
+            <form id="quizForm3">
+                <div class="question-block" data-correct-answer="A">
+                    <p>1. Which comparison operator checks for both **equality of value AND equality of data type**?</p>
+                    <label><input type="radio" name="q3_1" value="A"> ===</label>
+                    <label><input type="radio" name="q3_1" value="B"> ==</label>
+                    <label><input type="radio" name="q3_1" value="C"> !=</label>
+                    <label><input type="radio" name="q3_1" value="D"> <></label>
+                </div>
+                
+                <div class="question-block" data-correct-answer="D">
+                    <p>2. To check if two conditions must **BOTH be true**, which logical operator is used?</p>
+                    <label><input type="radio" name="q3_2" value="A"> || (OR)</label>
+                    <label><input type="radio" name="q3_2" value="B"> ! (NOT)</label>
+                    <label><input type="radio" name="q3_2" value="C"> XOR</label>
+                    <label><input type="radio" name="q3_2" value="D"> && (AND)</label>
+                </div>
+                
+                <div class="question-block" data-correct-answer="C">
+                    <p>3. What keyword is used to check an **additional condition** if the initial 'if' condition is false?</p>
+                    <label><input type="radio" name="q3_3" value="A"> else if</label>
+                    <label><input type="radio" name="q3_3" value="B"> except</label>
+                    <label><input type="radio" name="q3_3" value="C"> elseif</label>
+                    <label><input type="radio" name="q3_3" value="D"> case</label>
+                </div>
+
+                <div class="question-block" data-correct-answer="B">
+                    <p>4. What does the operator <code>!=</code> mean in PHP?</p>
+                    <label><input type="radio" name="q3_4" value="A"> Less than or equal to</label>
+                    <label><input type="radio" name="q3_4" value="B"> Not equal to</label>
+                    <label><input type="radio" name="q3_4" value="C"> Assignment operator</label>
+                    <label><input type="radio" name="q3_4" value="D"> Identity operator</label>
+                </div>
+
+                <div class="question-block" data-correct-answer="A">
+                    <p>5. Which statement is generally preferred for checking **one variable against many possible, specific values**?</p>
+                    <label><input type="radio" name="q3_5" value="A"> switch</label>
+                    <label><input type="radio" name="q3_5" value="B"> if/elseif chain</label>
+                    <label><input type="radio" name="q3_5" value="C"> for loop</label>
+                    <label><input type="radio" name="q3_5" value="D"> ternary operator</label>
+                </div>
+                <button type="button" onclick="submitQuiz(3)">Submit Quiz 3</button>
+            </form>
+            <div id="results3" class="results-container" style="display:none;"></div>
+        </section>
+
+        <section class="quiz-concept" id="quiz-section-4">
+            <h3>Quiz 4: Loops / Repetition</h3>
+            <form id="quizForm4">
+                <div class="question-block" data-correct-answer="D">
+                    <p>1. Which loop is best suited when you know the **exact number of iterations** beforehand?</p>
+                    <label><input type="radio" name="q4_1" value="A"> while loop</label>
+                    <label><input type="radio" name="q4_1" value="B"> do-while loop</label>
+                    <label><input type="radio" name="q4_1" value="C"> foreach loop</label>
+                    <label><input type="radio" name="q4_1" value="D"> for loop</label>
+                </div>
+                
+                <div class="question-block" data-correct-answer="B">
+                    <p>2. What is the primary use case for the <code>foreach</code> loop in PHP?</p>
+                    <label><input type="radio" name="q4_2" value="A"> Counting from 1 to 100</label>
+                    <label><input type="radio" name="q4_2" value="B"> Iterating over elements in an **array or object**</label>
+                    <label><input type="radio" name="q4_2" value="C"> Creating infinite loops</label>
+                    <label><input type="radio" name="q4_2" value="D"> Checking a condition repeatedly</label>
+                </div>
+                
+                <div class="question-block" data-correct-answer="A">
+                    <p>3. Which statement immediately **stops the current loop iteration** and moves to the next one?</p>
+                    <label><input type="radio" name="q4_3" value="A"> continue</label>
+                    <label><input type="radio" name="q4_3" value="B"> break</label>
+                    <label><input type="radio" name="q4_3" value="C"> exit</label>
+                    <label><input type="radio" name="q4_3" value="D"> return</label>
+                </div>
+
+                <div class="question-block" data-correct-answer="C">
+                    <p>4. What is the key difference between <code>while</code> and <code>do-while</code> loops?</p>
+                    <label><input type="radio" name="q4_4" value="A"> Only 'while' can use the 'break' statement.</label>
+                    <label><input type="radio" name="q4_4" value="B"> 'while' is faster.</label>
+                    <label><input type="radio" name="q4_4" value="C"> 'do-while' always executes the body **at least once**.</label>
+                    <label><input type="radio" name="q4_4" value="D"> 'while' is used for arrays.</label>
+                </div>
+
+                <div class="question-block" data-correct-answer="B">
+                    <p>5. What is a common mistake when using a <code>while</code> loop that can lead to an **infinite loop**?</p>
+                    <label><input type="radio" name="q4_5" value="A"> Starting the counter at 0</label>
+                    <label><input type="radio" name="q4_5" value="B"> Forgetting to update the loop counter/condition variable</label>
+                    <label><input type="radio" name="q4_5" value="C"> Using a condition with the '==' operator</label>
+                    <label><input type="radio" name="q4_5" value="D"> Using single quotes in the condition</label>
+                </div>
+                <button type="button" onclick="submitQuiz(4)">Submit Quiz 4</button>
+            </form>
+            <div id="results4" class="results-container" style="display:none;"></div>
+        </section>
+
+        <section class="quiz-concept" id="quiz-section-5">
+            <h3>Quiz 5: Output Data / Displaying Results</h3>
+            <form id="quizForm5">
+                <div class="question-block" data-correct-answer="B">
+                    <p>1. Which language construct is generally considered slightly **faster** for printing simple strings?</p>
+                    <label><input type="radio" name="q5_1" value="A"> print</label>
+                    <label><input type="radio" name="q5_1" value="B"> echo</label>
+                    <label><input type="radio" name="q5_1" value="C"> var_dump()</label>
+                    <label><input type="radio" name="q5_1" value="D"> printf()</label>
+                </div>
+                
+                <div class="question-block" data-correct-answer="C">
+                    <p>2. Which function is essential for **debugging**, as it displays structured information (type and value)?</p>
+                    <label><input type="radio" name="q5_2" value="A"> print_r()</label>
+                    <label><input type="radio" name="q5_2" value="B"> gettype()</label>
+                    <label><input type="radio" name="q5_2" value="C"> var_dump()</label>
+                    <label><input type="radio" name="q5_2" value="D"> debug_info()</label>
+                </div>
+                
+                <div class="question-block" data-correct-answer="A">
+                    <p>3. What is the correct way to output the text "Hello PHP" in a PHP script?</p>
+                    <label><input type="radio" name="q5_3" value="A"> echo "Hello PHP";</label>
+                    <label><input type="radio" name="q5_3" value="B"> print("Hello PHP");</label>
+                    <label><input type="radio" name="q5_3" value="C"> echo 'Hello PHP'</label>
+                    <label><input type="radio" name="q5_3" value="D"> print_line("Hello PHP");</label>
+                </div>
+                
+                <div class="question-block" data-correct-answer="D">
+                    <p>4. To output an HTML **line break** inside PHP, what should you use?</p>
+                    <label><input type="radio" name="q5_4" value="A"> \n</label>
+                    <label><input type="radio" name="q5_4" value="B"> print_break()</label>
+                    <label><input type="radio" name="q5_4" value="C"> &lt;newline&gt;</label>
+                    <label><input type="radio" name="q5_4" value="D"> &lt;br&gt;</label>
+                </div>
+
+                <div class="question-block" data-correct-answer="A">
+                    <p>5. The <code>print</code> statement always returns which value?</p>
+                    <label><input type="radio" name="q5_5" value="A"> 1</label>
+                    <label><input type="radio" name="q5_5" value="B"> true</label>
+                    <label><input type="radio" name="q5_5" value="C"> 0</label>
+                    <label><input type="radio" name="q5_5" value="D"> null</label>
+                </div>
+                <button type="button" onclick="submitQuiz(5)">Submit Quiz 5</button>
+            </form>
+            <div id="results5" class="results-container" style="display:none;"></div>
+        </section>
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2025 PHP Academy Graduation Project. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function submitQuiz(quizNumber) {
+            // Get the specific quiz form
+            const form = document.getElementById(`quizForm${quizNumber}`);
+            // Get the specific results container
+            const resultsContainer = document.getElementById(`results${quizNumber}`);
+            
+            // Get questions for this form only
+            const questions = form.querySelectorAll('.question-block');
+            let correctAnswers = 0;
+            const totalQuestions = questions.length; // Always 5 
+
+            questions.forEach(question => {
+                // Get the input name (q1_1, q1_2, etc.)
+                const name = question.querySelector('input[type="radio"]').name;
+                const selectedRadio = form.elements[name];
+                
+                // Check if an answer was selected
+                let userAnswer = '';
+                if (selectedRadio.value) {
+                    userAnswer = selectedRadio.value;
+                }
+                
+                const correctAnswer = question.getAttribute('data-correct-answer');
+
+                // Check answer and color question border
+                if (userAnswer === correctAnswer) {
+                    correctAnswers++;
+                    question.style.border = '2px solid #28a745'; // Green
+                } else {
+                    question.style.border = '2px solid #dc3545'; // Red
+                }
+                
+                // Disable inputs after submission
+                form.elements[name].forEach(radio => radio.disabled = true);
+            });
+
+            // Calculate score percentage
+            const scorePercent = ((correctAnswers / totalQuestions) * 100).toFixed(0);
+
+            // Set results content
+            resultsContainer.innerHTML = `
+                <h2>Quiz ${quizNumber} Results</h2>
+                <p>You answered <span id="correctCount">${correctAnswers}</span> out of 5 questions correctly.</p>
+                <p>Your Final Score: <span id="scorePercentage">${scorePercent}%</span></p>
+                <button onclick="location.reload()">Try Again</button>
+            `;
+            
+            // Hide submit button and show results for this quiz only
+            form.querySelector('button').style.display = 'none';
+            resultsContainer.style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
